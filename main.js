@@ -42,8 +42,8 @@ const displayProducts = () => {
         <td>${item.price}</td>
         <td>${item.quantity}</td>
         <td>${(item.price * item.quantity)}</td>
-        <td><button onclick="deleteProducts(${index})">Delete</button></td>
-        <td><button onclick="editProducts(${index})">Edit</button></td>
+        <td><button onclick="deleteProducts(${index})" class="delete-btn">Delete</button></td>
+        <td><button onclick="editProducts(${index})" class="edit-btn">Edit</button></td>
         </tr>`
     });
     document.querySelector('.productTableBody').innerHTML = items.join('');

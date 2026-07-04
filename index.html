@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="products">
-    <form name="productsForm">
-        <label for="productName">Product Name:</label>
-        <input type="text" id="productName" name="productName">
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price">
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity">
-        <button type="submit">Add Product</button>
-    </form>
+    <div class="heading">
+        <h1>Shopping List</h1>
     </div>
-    
+    <div class="products form">
+        <form name="productsForm">
+            <label for="productName" class="form-label">Product Name:</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" id="price" name="price" placeholder="Enter price">
+            <label for="quantity" class="form-label">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity">
+            <button type="submit" class="add-product-btn">Add Product</button>
+        </form>
+    </div>
+
     <table class="productTable">
         <thead>
             <tr>
@@ -26,6 +32,8 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody class="productTableBody">
@@ -35,4 +43,5 @@
     </table>
     <script src="main.js"></script>
 </body>
+
 </html>
