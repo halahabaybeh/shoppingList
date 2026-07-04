@@ -1,13 +1,8 @@
 const productForm = document.forms['productsForm'];
 
-let productslist = [];
-let indexEdited = null;
 
-const getProducts = () => {
-    if (localStorage.getItem('products') != null) {
-        productslist = JSON.parse(localStorage.getItem('products'));
-    }
-};
+let productslist = JSON.parse(localStorage.getItem('products')) || [];
+let indexEdited = null;
 
 
 productForm.onsubmit = (e) => {
@@ -65,5 +60,5 @@ const editProducts = (index) => {
 
 }
 
-getProducts();
+
 displayProducts();
