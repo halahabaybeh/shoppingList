@@ -29,6 +29,8 @@ productForm.onsubmit = (e) => {
     displayProducts();
 }
 
+
+
 const displayProducts = () => {
     const items = productslist.map((item, index) => {
         return `<tr>
@@ -41,9 +43,13 @@ const displayProducts = () => {
         <td><button onclick="editProducts(${index})" class="edit-btn">Edit</button></td>
         </tr>`
     });
+    if (items.length === 0){
+         document.querySelector('.productTableBody').innerHTML = `<tr> <td colspan="7">No products found.</td> </tr>`
+    }else{
     document.querySelector('.productTableBody').innerHTML = items.join('');
-
+    }
 }
+
 
 const deleteProducts = (index) => {
     productslist.splice(index, 1);
